@@ -1,0 +1,11 @@
+This project, although easy on paper, took longer than expected, although not to long to complete.
+In fact, it was actually pretty fun since it taught me a lot about handling objects, and helped me
+refine my abilities with generics and exception handling.
+
+This was also the first project where I used the debugger effectively, and that is certainly
+something I will do on future projects. This project also showed me that creating/implementing
+data structures may not be the worst thing in the world from whwat I've seen and experienced both
+in the past and right now.
+
+Overall, this project was a nice workout, and although I didn't struggle very much with it, it still
+taught me a lot as a programmer.
