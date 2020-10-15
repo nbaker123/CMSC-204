@@ -1,0 +1,7 @@
+The assignment description for BasicDoubleLinkedList said that I had to make the tail point to the head, so I decided to make a
+circly/looping linked list by structure.
+
+WAIT WAIT!!! The list still functions as a doubly linked list, however, so don't worry about it having other functions. I was just doing
+what the description told me to do.
+
+Thanks.

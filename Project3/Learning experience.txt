@@ -1,0 +1,7 @@
+I learned a great deal of things throughout this project. I learned how to use comparators and iterators,
+how to write inner classes, and improved my ability to use object references and the debugger in eclipse.
+
+One thing I struggled on was writing the student tests. Specifically, the fact that they take a while to write,
+so I will alot myself a little more time in the future to get them done and do them better.
+
+Because of all of the things I learned, this is a project that I'll be sure to remember for a while.

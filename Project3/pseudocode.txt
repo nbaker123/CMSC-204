@@ -1,0 +1,49 @@
+BasicDoubleLinkedList
+
+getSize(): return the size field (int)
+
+addToEnd(T data): use the end field to get the last Node, set its next value to the new data, then
+set the next value of the new data to null, then set the end value to the reference of the new data. 
+Return this afterwards.
+
+addToFront(T data): use the head field to get the first node, set its previous value to the new data,
+set the previous value of the new Node to null, set the next value of the new Node to the original head,
+then set the head to the reference to the new data. Return this afterwards
+
+getFirst(): returns the reference in the head field. If head is null, null is returned.
+
+getLast(): returns the reference in the tail field. If tail is null, null is returned.
+
+iterator(): ???
+
+remove(T targetData, Comparator<T> comparator): traverse through the list to find the first instance
+of the targetData, and remove it. Use the comparator somewhere along the way (I have no idea how to use it
+or what they mean bey using it since it's an interface). Return this afterwards
+
+retrieveFirstElement(): use the head field to get the first node, set its next value to null,
+set the next node's previous value to null and set the head the reference of that node, 
+then return the data in the node that was initially retrieved.
+
+retrieveLastElement(): use the tail field to get the first node, set its previous value to null,
+set the previous node's next value to null and set the tail to the reference of 
+that node, then return the data in the node that was initially retrieved.
+
+toArrayList(): create an ArrayList of type T and iterate through the list, adding the
+data from each Node into the ArrayList. Return the ArrayList afterwards.
+
+
+
+SortedDoubleLinkedList
+
+add(T data): If there are no elements in the list, add the data in and set it as the head and the tail, and return this.
+If not, iterate through the list using the next values of each Node until the comparator finds a spot which is greater
+than the data being added, then create a new node with that data and add it accordingly. If the loop reaches the end, then
+create a new Node for the data and add it to the end of the list using the same formula as addToEnd in the super class.
+Return this afterwards.
+
+addToEnd(T data) and addToFront(T data): throw an UnsupportedOperationException
+
+iterator(): call the iterator method of the superclass and return its result.
+
+remove(T data, Comparator<T> comparator): call the remove method of the superclass using the list and its comparator,
+and return its result.
