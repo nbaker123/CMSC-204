@@ -1,0 +1,48 @@
+CourseDBElement
+-------------------
+
+- There will be getters and setters for every attribute
+
+- compareTo(): the second crn will be subtracted from the first, and the result will be returned.
+The result will be less than 0 if the first is less than the second, greater than 0 if the first is
+greater than the second, and 0 if they are equal.
+
+
+CourseDBStructure
+---------------------
+
+- The number of indexes in the array will be determined by the user.
+
+- The hash key will be the hashcode of the crn as a String % table size.
+
+- add: use the hash function to determine which index the course falls under. If no list exists
+there, then expand the list to include that index and add the course to that list. If there is a
+list there, then use the get method to see if it is already in there. If it is, then return.
+If not, then add the element to that list.
+
+- get: use the hash function to find where the element fits, then search for the element 
+in that list. If the element is not found or the index it should be in does not exist, throw an
+IOException. Other wise, return the element with that crn.
+
+- getTableSize: return the number of indexes in the array as determined by the function which
+determines the size of the array.
+
+
+CourseDBManager
+-----------------
+
+- This class will have a constructor that accepts a CourseDBStructure.
+
+- add: create a new CourseDBElement with the parameters that are passed in, and use the add method
+in CourseDBStructure to add the element to the structure within the class.
+
+- get: use the get method in CourseDBStructure to find the element and return it. If it throws an
+exception, then return null.
+
+- readFile: step through the file, creating elements with the attributed gathered from each line, and
+use the add method to add them to the array. If the file does not exist, 
+throw a FileNotFoundException.
+
+- showAll: step through the array and use the toString method in CourseDBElement to convert the
+information in every element in each list into a String (1 String per list/index), 
+and add each one to the ArrayList. Return the ArrayList afterwards.

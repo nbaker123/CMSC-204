@@ -1,0 +1,12 @@
+This project was much easier than expected since there really wasn't much to program.
+I did enjoy it, however, and for a few reasons.
+
+The first reason was that it helped me get used to hashing (or at least bucket hashing),
+and the second reason was that it made me apply my knowledge of comparators, thus refreshing
+me on how to make and use them.
+
+One thing I did not like about the project, however, was making my own test since I had to
+make one which tested all of the data for courses.txt, which took a boring while to write and debug.
+
+But hey, that's programming. The rest was easy for me anyways, so I don't really care about that
+in the end.
