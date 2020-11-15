@@ -1,0 +1,54 @@
+TreeNode<T>
+------------
+getData: return the data for that TreeNode
+
+
+MorseCodeTree
+-------------
+addNode: (The updated version of this is explained in the javadoc)
+trim the code string, then check the first character and remove it from the string.
+if the character is a dot, then check to the left of the root. If the left node is null, store
+the data there, otherwise call the method again with the left node as the root and the code without
+the character that was checked as the code. If the character checked was a dot, then do the previous
+steps, but going to the right instead.
+
+buildTree: call insert to add each letter in the following order: e t i a n m s u r w d k g o h v
+f l p j b x c y z q. Use the morse code values of each letter as the code for each call.
+
+delete: throw an UnsupportedOperationException
+
+fetch: call fetchNode with the root and the data passed in.
+
+fetchNode: (the updated version of this is explained in the javadoc)
+ read the first character, then remove it from the code string. If the character is a
+dot, then return the result of fetchNode with the left node as the root and the code without the 
+first character as the code string. If the character is a dash, then do the same thing but going to
+the right.
+
+getRoot: return the reference to the root.
+
+insert: call addNode with the code and the letter, then return the tree.
+
+LNROutputTraversal: This method is recursive. Call the method with the nod to the left of the current
+node as the root, then add the data of the current node to the ArrayList, then call the method 
+with the node to the right of the current node as the root.
+
+setRoot: set the current root to a new node with the data passed in.
+
+toArrayList: call LNROutputTraversal with the ArrayList passed in
+
+update: throw an UnsupportedOperationException.
+
+MorseCodeConverter
+------------------
+convertToEnglish(File codeFile): assuming the file only has one line, read that one line and trim it
+with the trim method in String. Use the split method on it and read each index, calling the fetch
+method with the code in each index. Add the result of each fetch call to the result string, and
+return the result at the end.
+
+convertToEnglish(String code): trim the code string, split it and read each index in the array,
+calling the fetch method with the code of each index. Add the result of each fetch call to the 
+result string, and return the result at the end.
+
+printTree: create an ArrayList for the tree using toArrayList, then iterate through the list, adding
+each data value to a result string with a space afterwards, and return the result.
