@@ -1,0 +1,107 @@
+Town:
+
+getters and setters will retrieve and set their respective values of the same name.
+
+compareTo and equals: reduce the names to lowercase and trim them, and return true if those
+names are the same, false otherwise.
+
+hashCode: the hashcode will be the hashcode of the name.
+
+toString: return the name of the town
+
+
+Road:
+
+getters and setters will retrieve and set their respective values of the same name.
+
+compareTo: return the first weight minus the second weight
+
+equals: return true if the edges contain the same two towns, false otherwise
+
+contains: return true if one of the towns equals the target town with the equals method in the Town
+class, false otherwise.
+
+toString: return the following: [Road name] connecting [source] and [destination]
+
+
+Graph:
+
+**This class will contain a set of vertices and a set of edges
+
+getEdge: iterate through the edge set and check if each one contains both target towns, and return
+the edge that does. Otherwise, return null. If any of the target vertices is null, then 
+return null as well.
+
+addEdge: create a new Road object using the provided parameters and add it to the edge set. If
+Throw an IllegalArgumentException if the provided Towns are not in the vertex set, or a
+NullPointerException if any of the vertices is null. Return the new Road object aftwerwards, null
+otherwise.
+
+addVertex: check if the vertex is in the vertex set, and add it if it is not and return true.
+Otherwise, return false, or throw a NullPointerException if the vertex is null. If the vertex
+has adjecent vertexes, add edges to the edge set to accomodate.
+
+containsEdge: Check if both of the vertices specified are in the vertex set, and return false
+if that is false. Iterate through the edge set, and check if each one has both the vertices 
+specified. If any of them do, return true, otherwise return false.
+
+containsVertex: If the vertex set contains a vertex that is equal to the target in the equals
+method, return false. Otherwise, return true.
+
+edgeSet: return the edge set of the graph.
+
+edgesOf: create a new HashSet of edges, and iterate through the edge set, adding any edge that
+contains the specified vertex to the new set. Return the new set afterwards.
+
+removeEdge: iterate through the edge set, comparing each element with the specified data.
+If the weight is <= -1 or the description is null, then they must be checked separately to
+avoid a NullPointerException. If any of the edges matches all of the data, then remove it
+from the set and return it. Otherwise, return null.
+
+removeVertex: use containsVertex to determine if the specified node is in the vertex set. If it is
+not, return false. Otherwise, remove the vertex from the set and iterate through the edge set,
+removing all edges that contain that node, then return true.
+
+vertexSet: return the vertex set of the graph.
+
+shortestPath: get the shortest path from the source to every other node using dijkstraShortestPath,
+and use that data with the Dijkstra algorithm to find the shortest path to the destination.
+
+dijkstraShortestPath: ???
+
+
+TownGraphManager:
+
+addRoad: call addEdge with the graph and send in the specified data.
+
+getRoad: get the road that connects both towns with getEdge, and return its name.
+
+addTown: create a new town with the specified name and use it to call addVertex with the graph.
+
+getTown: get the vertex set using vertexSet, and iterate through it until the vertex with the
+specified name is found, and return it, otherwise return null.
+
+containsTown: create a new vertex with the specified name and return the result of the
+containsVertex method using that vertex.
+
+containsRoadConnection: create two new vertices with the specified names, and return the result
+of containsEdge in the graph class using those vertices.
+
+allRoads: get the edge set using edgeSet in the graph class, then iterate through it, adding the
+names of each edge into the ArrayList. Sort the ArrayList and return it afterwards.
+
+deleteRoadConnection: use removeEdge in the graph class to remove the edge. Return true if the
+method returns an edge, or false if it returns null.
+
+deleteTown: create a new vertex using the specified name and return the result of removeVertex
+in the graph class using that vertex.
+
+allTowns: get the vertex set using vertexSet in the graph class and iterate through it, adding
+the names of each vertex to the ArrayList. Sort the ArrayList and return it afterwards.
+
+getPath: create two new vertexes with the specified names and call shortestPath with those two
+vertexes. Return the result.
+
+readFile: if the file name is not valid or found, do nothing in the method. Otherwise, go through
+every line, retrieving the name, weight, and vertices of each Road, and use that data to add
+each road into the graph. Add all of the vertices as well, and make sure they are added only once.

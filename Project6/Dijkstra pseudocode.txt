@@ -1,0 +1,44 @@
+set of vertices
+set of edges
+we can get edges that have a certain vertex
+we can get neighbors of vertex
+
+weight
+destination
+source
+road
+OUTPUT: String
+
+ArrayList<String> for shortest distance
+
+Set<Town> containedVertices
+Queue vertexQueue
+Set<Edge> containedEdges
+Set<Edge> possibleEdges
+current = source
+add source to containedVertices and vertexQueue
+currentEdges = edges of source
+write notation and add it all to shortest distance.
+
+:begin while loop
+while(containedVertices size != vertices size and the queue is not empty)
+iterate through vertexQueue
+	current = current index
+	currentEdges = edges of current
+	iterate through currentEdges
+		if an edge has smallest weight and not contained in containedEdges and no town
+is contained in containedVertices, record it
+	if resulting edge is null, remove current from vertexQueue, otherwise add 
+the resulting edge to possible edges using a new road with the current node as the source
+and the other node as the destination
+
+get smallest edge from possible edges, add the edge to containedEdges and add the other node to
+containedVertices and vertexQueue if it is not already in there
+
+find the String notation of the shortest path to each neighbor of the other node. If the notation
+exists, then if the current path to it is less than the previous path, then overwrite that notation
+with the current path. If it does not exist, then create one with the current path.
+
+clear possibleEdges
+
+:end while loop

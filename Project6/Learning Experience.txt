@@ -1,0 +1,12 @@
+This project was the most arduous I have ever done, and for one reason only: DIJKSTRA'S
+ALGORITHM! That algorithm took me over five hours to figure out how to do with what I had,
+and almost as long to actually code it. However, the debug process did not take that long.
+
+This project not only allowed me to experience implementing other people's algorithms for
+the first time, but it also gave me a lot of practice with using iterators and hash sets.
+
+In addition to this, I also got more practice on creating my own JUnit tests. Specifically, with
+creating and testing my own data.
+
+I don't seem to know what I would do differently if I did this project again, but this was
+certainly a learning experience.
